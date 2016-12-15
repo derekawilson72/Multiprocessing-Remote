@@ -14,6 +14,7 @@ keepLooping=Value('i', 1)##set the initial shared parameters
 
 ####start the kernel in its own process so that the main process can proceed without delay.
 p1=Process(target=launchIPythonProcess, args=(num,arr,keepLooping,))
+
 p1.start()
 #####in the example loop, watch the value increment for num.value
 1. 
@@ -22,7 +23,8 @@ p1.start()
 #
 
 p1.pid  ##get the process id.  users can access this process in Ipython as follows: 
-ipython console --existing kernel-<your-pid-above>.json
+
+ipython console --existing kernel-\<your-pid-above>.json
 
 
 
